@@ -29,15 +29,24 @@ const bgButton = document.getElementById("bgChangeBtn");
 const greenPink = makeSVG('#b9d09d', '#e8caca');
 const blueBrown = makeSVG('#6d7d7d', '#5f5656');
 const backgrounds = [greenPink,blueBrown];
+const bgImages = ['images/heartButton.png', 'images/starButton.png'];
 const textColors = ['#000000', '#ffffff'];
 let current = 0;
 
+// apply immediately when page loads
+document.body.style.backgroundImage = backgrounds[0];
+document.body.style.backgroundRepeat = 'repeat';
+document.body.style.backgroundSize = '60px 60px';
+document.body.style.color = textColors[0];
+document.querySelector('h1').style.color = textColors[0];
+document.getElementById('bgChangeBtn').src = bgImages[0];
 
 bgButton.addEventListener("click", () => {
     current = (current + 1) % backgrounds.length;
-    document.body.style.backgroundImage = backgrounds[current]
+    document.body.style.backgroundImage = backgrounds[current];
     document.body.style.backgroundRepeat = 'repeat';
     document.body.style.backgroundSize = '60px 60px';
     document.body.style.color = textColors[current];
     document.querySelector('h1').style.color = textColors[current];
+    bgButton.src = bgImages[current];
 });
