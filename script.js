@@ -1,7 +1,7 @@
 const button = document.getElementById("showBioBtn");
 const extraBio = document.getElementById("extraBio");
 const bgButton = document.getElementById("bgChangeBtn");
-const backgrounds = [magicpattern(),   // your function that returns a CSS pattern
+const backgrounds = [() => magicpattern(),   // your function that returns a CSS pattern
   "green"];
 let current = 0;
 
@@ -18,7 +18,8 @@ button.addEventListener("click", function() {
 // list of backgrounds (colors or CSS patterns)
 bgButton.addEventListener("click", () => {
     current = (current + 1) % backgrounds.length; // cycle through backgrounds
+    const bg = typeof backgrounds[current] === "function" ? backgrounds[current]() : backgrounds[current];
     // Apply it to the page
-    document.body.style.background = backgrounds[current]; // change background
+    document.body.style.background = bg; // change background
 });
 
