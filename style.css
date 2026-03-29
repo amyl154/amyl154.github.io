@@ -1,16 +1,17 @@
 body {
   font-family: Arial;
-  background: #f4f4f4;
+  background: #755d55;
   text-align: center;
+
 }
 
 h1 {
-  color: rgb(93, 123, 32);
+  color: rgb(142, 185, 54);
 }
 
 .bio {
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: #fefefe;
   margin-bottom: 20px;
 }
