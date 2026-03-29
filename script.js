@@ -1,10 +1,8 @@
 const button = document.getElementById("showBioBtn");
 const extraBio = document.getElementById("extraBio");
 const bgButton = document.getElementById("bgChangeBtn");
-const backgrounds = [
-  "repeating-radial-gradient(circle, #fff7f3 0px, #000000 5px, transparent 5px, transparent 25px)" // dotted pattern// 
-  ,"repeating-radial-gradient(circle, #000000 0px, #ffffff 5px, transparent 5px, transparent 25px)"
-];
+const backgrounds = [magicpattern(),   // your function that returns a CSS pattern
+  "green"];
 let current = 0;
 
 button.addEventListener("click", function() {
@@ -19,7 +17,8 @@ button.addEventListener("click", function() {
 
 // list of backgrounds (colors or CSS patterns)
 bgButton.addEventListener("click", () => {
-  current = (current + 1) % backgrounds.length; // cycle through backgrounds
-  document.body.style.background = backgrounds[current]; // change background
+    current = (current + 1) % backgrounds.length; // cycle through backgrounds
+    // Apply it to the page
+    document.body.style.background = backgrounds[current]; // change background
 });
 
