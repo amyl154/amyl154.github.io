@@ -54,6 +54,7 @@ h1 {
 
 .status-text {
   display: inline-block;
+  font-style: italic;
   animation: slide 10s linear infinite;
 }
 
