@@ -29,7 +29,7 @@ const bgButton = document.getElementById("bgChangeBtn");
 const greenPink = makeSVG('#b9d09d', '#e8caca');
 const blueBrown = makeSVG('#6d7d7d', '#5f5656');
 const backgrounds = [greenPink,blueBrown];
-const bgImages = ['images/heartButton.png', 'images/starButton.png'];
+const bgImages = ['images/starButton.png', 'images/heartButton.png'];
 const textColors = ['#000000', '#ffffff'];
 let current = 0;
 
