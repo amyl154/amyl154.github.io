@@ -1,17 +1,22 @@
 body {
-  font-family: Arial;
-  background: #755d55;
-  text-align: center;
-
+  font-family: san;
+  background-image: repeating-radial-gradient(
+    circle,        /* shape of the pattern */
+    #ffd8d8 0px,   /* dot color */
+    #9fcb73 5px,   /* dot size */
+    transparent 5px, /* space between dots starts */
+    transparent 25px /* distance before next dot */
+  );
+  text-align:center;
 }
 
 h1 {
-  color: rgb(142, 185, 54);
+  color: rgb(0, 0, 0);
 }
 
 .bio {
   font-size: 18px;
   line-height: 1.6;
-  color: #fefefe;
+  color: #000000;
   margin-bottom: 20px;
 }
