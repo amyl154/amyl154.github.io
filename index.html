@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
-
 <body>
   <div class="lace-left"></div>
   <div class="lace-right"></div>
@@ -31,9 +29,32 @@
 
   <img id="bgChangeBtn" src="starButton.png" style="position: fixed; top: 70px; right: 480px; width: 60px; height: 60px; cursor: pointer;">
   
-  <!-- Link the JavaScript file -->
-  <script src="script.js"></script>
+  <img id="guestbookBtn" src="images/guestbook.png" style="cursor: pointer;">
 
+  <!-- guestbook popup -->
+  <div id="guestbookModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; padding:2rem; border-radius:16px; width:90%; max-width:400px; z-index:999;">
+    <h2>Guestbook</h2>
+
+    <input id="guestName" type="text" placeholder="Your name" style="width:100%; margin:8px 0; padding:8px; border-radius:8px; border:1px solid #ccc;"><br>
+    
+    <textarea id="guestMessage" placeholder="Leave a message..." style="width:100%; margin:8px 0; padding:8px; border-radius:8px; border:1px solid #ccc; height:100px;"></textarea><br>
+
+    <div id="moodPicker" style="font-size:1.5rem; margin:8px 0; cursor:pointer;">
+      <span class="mood">🌸</span>
+      <span class="mood">🌷</span>
+      <span class="mood">🍵</span>
+      <span class="mood">✨</span>
+      <span class="mood">🎀</span>
+    </div>
+
+    <button id="submitEntry">Sign Guestbook</button>
+    <button id="closeModal">Close</button>
+
+    <div id="entries"></div>
+  </div>
+
+  <!-- Link the JavaScript file -->
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
