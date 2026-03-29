@@ -1,8 +1,7 @@
 const button = document.getElementById("showBioBtn");
 const extraBio = document.getElementById("extraBio");
 const bgButton = document.getElementById("bgChangeBtn");
-const backgrounds = [() => magicpattern(),   // your function that returns a CSS pattern 
-() => magicpattern2()];
+//const backgrounds = [];
 
 
 button.addEventListener("click", function() {
@@ -15,24 +14,33 @@ button.addEventListener("click", function() {
     }
 });
 
-function magicPattern(bgColor, dotColor = "#ffe4e4") {
-  return `url("data:image/svg+xml;utf8,
-  <svg viewBox='0 0 200 140' xmlns='http://www.w3.org/2000/svg'>
-    <rect width='100%' height='100%' fill='${bgColor}'/>
-    <circle cx='20' cy='20' r='5' fill='${dotColor}'/>
-    <circle cx='60' cy='20' r='5' fill='${dotColor}'/>
-    <circle cx='100' cy='20' r='5' fill='${dotColor}'/>
-    <circle cx='140' cy='20' r='5' fill='${dotColor}'/>
-    <circle cx='180' cy='20' r='5' fill='${dotColor}'/>
-    
-    <circle cx='40' cy='60' r='5' fill='${dotColor}'/>
-    <circle cx='80' cy='60' r='5' fill='${dotColor}'/>
-    <circle cx='120' cy='60' r='5' fill='${dotColor}'/>
-    <circle cx='160' cy='60' r='5' fill='${dotColor}'/>
-  </svg>")`;
+function makeSVG(bg, dot) {
+  const encoded = encodeURIComponent(
+    `<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
+      <rect width='100%' height='100%' fill='${bg}'/>
+      <circle cx='20' cy='20' r='5' fill='${dot}'/>
+    </svg>`
+  );
+  return `url("data:image/svg+xml;utf8,${encoded}")`;
 }
 
-document.body.style.backgroundImage = magicPattern("#b9d09d");
+/*
+`<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
+  <rect width='100%' height='100%' fill='${bg}'/>
+  <circle cx='20' cy='20' r='5' fill='${dot}'/>
+  <circle cx='0' cy='0' r='5' fill='${dot}'/>
+  <circle cx='40' cy='0' r='5' fill='${dot}'/>
+  <circle cx='0' cy='40' r='5' fill='${dot}'/>
+  <circle cx='40' cy='40' r='5' fill='${dot}'/>
+</svg>`
+*/
+
+const greenPink = makeSVG('#b9d09d', '#f4a7b9');
+const brownPink = makeSVG('#8B6252', '#f4a7b9');
+
+document.body.style.backgroundImage = greenPink;
+document.body.style.backgroundRepeat = 'repeat';
+document.body.style.backgroundSize = '40px 40px';
 
 /*
 let current = 0;
