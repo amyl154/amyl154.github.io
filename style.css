@@ -1,6 +1,8 @@
 body {
-  font-family: sans-serif;
-  text-align:center;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  text-align: center;
 }
 
 .lace-left, .lace-right {

@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const preload2 = new Image();
   preload1.src = bgImages[0];
   preload2.src = bgImages[1];
+
+  const modalThemes = [
+  { bg: '#f5e6ea', border: '#e8caca', text: '#000000' }, // green theme
+  { bg: '#4a4a4a', border: '#5f5656', text: '#ffffff' }, // dark theme
+  ];
  
   function applyTheme(i) {
     document.body.style.backgroundImage = backgrounds[i];
@@ -65,6 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.color = textColors[i];
     document.querySelector('h1').style.color = textColors[i];
     bgButton.src = bgImages[i];
+
+    // update modal colors
+    const modal = document.getElementById('guestbookModal');
+    modal.style.background = modalThemes[i].bg;
+    modal.style.color = modalThemes[i].text;
+    modal.style.border = `2px solid ${modalThemes[i].border}`;
   }
  
   applyTheme(0);
