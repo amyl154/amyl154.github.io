@@ -27,9 +27,9 @@ function makeSVG(bg, dot) {
 
 const bgButton = document.getElementById("bgChangeBtn");
 const greenPink = makeSVG('#b9d09d', '#e8caca');
-const brownPink = makeSVG('#8B6252', '#e8caca');
+const brownPink = makeSVG('#6d7d7d', '#5f5656');
 const backgrounds = [greenPink,brownPink];
-const textColors = ['#3b4a2f', '#ffe2e2'];
+const textColors = ['#000000', '#ffffff'];
 let current = 0;
 
 
