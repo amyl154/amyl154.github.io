@@ -15,25 +15,28 @@ function makeSVG(bg, dot) {
   const encoded = encodeURIComponent(
     `<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
   <rect width='100%' height='100%' fill='${bg}'/>
-  <circle cx='20' cy='20' r='10' fill='${dot}'/>
-  <circle cx='0' cy='0' r='10' fill='${dot}'/>
-  <circle cx='40' cy='0' r='10' fill='${dot}'/>
-  <circle cx='0' cy='40' r='10' fill='${dot}'/>
-  <circle cx='40' cy='40' r='10' fill='${dot}'/>
+  <circle cx='20' cy='20' r='5' fill='${dot}'/>
+  <circle cx='0' cy='0' r='5' fill='${dot}'/>
+  <circle cx='40' cy='0' r='5' fill='${dot}'/>
+  <circle cx='0' cy='40' r='5' fill='${dot}'/>
+  <circle cx='40' cy='40' r='5' fill='${dot}'/>
 </svg>`
   );
   return `url("data:image/svg+xml;utf8,${encoded}")`;
 }
 
 const bgButton = document.getElementById("bgChangeBtn");
-const greenPink = makeSVG('#b9d09d', '#ffdfdf');
-const brownPink = makeSVG('#8B6252', '#ffdfdf');
+const greenPink = makeSVG('#b9d09d', '#e8caca');
+const brownPink = makeSVG('#8B6252', '#e8caca');
 const backgrounds = [greenPink,brownPink];
+const textColors = ['#3b4a2f', '#ffe2e2'];
 let current = 0;
+
 
 bgButton.addEventListener("click", () => {
     current = (current + 1) % backgrounds.length;
     document.body.style.backgroundImage = backgrounds[current]
     document.body.style.backgroundRepeat = 'repeat';
     document.body.style.backgroundSize = '60px 60px';
+    document.body.style.color = textColors[current];
 });
