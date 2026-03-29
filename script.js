@@ -15,8 +15,6 @@ button.addEventListener("click", function() {
     }
 });
 
-document.body.style.background = magicpattern();
-
 // list of backgrounds (colors or CSS patterns)
 // bgButton.addEventListener("click", () => {
 // current = (current + 1) % backgrounds.length; // cycle through backgrounds
