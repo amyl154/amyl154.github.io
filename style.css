@@ -44,3 +44,20 @@ h1 {
   color: #aaa;
   font-style: italic;
 }
+
+.status-bar {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.status-text {
+  display: inline-block;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
