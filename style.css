@@ -39,3 +39,8 @@ h1 {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
+::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
