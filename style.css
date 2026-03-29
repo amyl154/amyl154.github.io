@@ -3,6 +3,19 @@ body {
   text-align:center;
 }
 
+.lace-left, .lace-right {
+  position: fixed;
+  top: 0;
+  width: 80px; /* adjust to your image width */
+  height: 100vh;
+  background-image: url('images/lace.png');
+  background-repeat: repeat-y; /* repeats downward */
+  background-size: contain;
+}
+
+.lace-left { left: 16; }
+.lace-right { right: 16; transform: scaleX(-1); } /* flips it to mirror */
+
 h1 {
   font-size: 100px;
 }
