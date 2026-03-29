@@ -6,15 +6,15 @@ body {
 .lace-left, .lace-right {
   position: fixed;
   top: 0;
-  width: 80px; /* adjust to your image width */
+  width: 300px; /* adjust to your image width */
   height: 100vh;
   background-image: url('images/lace.png');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }
 
-.lace-left { left: 16; }
-.lace-right { right: 16; transform: scaleX(-1); } /* flips it to mirror */
+.lace-left { left: -60px; }
+.lace-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
 
 h1 {
   font-size: 100px;
@@ -29,7 +29,7 @@ h1 {
 .lexend {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .bio {
