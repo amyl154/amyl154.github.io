@@ -10,13 +10,22 @@ body {
   top: 0;
   width: 300px; /* adjust to your image width */
   height: 100vh;
-  background-image: url('images/lace.png');
+  background-image: url('images/lace2.png');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }
 
 .lace-left { left: -60px; }
 .lace-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .lace-left, .lace-right {
+    display: none;
+  }
+} 
 
 h1 {
   font-size: 100px;
@@ -61,4 +70,9 @@ h1 {
 @keyframes slide {
   0%   { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
 }
