@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
   { bg: '#f5e6ea', border: '#e8caca', text: '#000000' }, // green theme
   { bg: '#4a4a4a', border: '#5f5656', text: '#ffffff' }, // dark theme
   ];
+
+  const ginghamImages = ['images/gingham2.png', 'images/gingham1.jpg'];
  
   function applyTheme(i) {
     document.body.style.backgroundImage = backgrounds[i];
@@ -76,6 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.background = modalThemes[i].bg;
     modal.style.color = modalThemes[i].text;
     modal.style.border = `2px solid ${modalThemes[i].border}`;
+
+    // update gingham
+    document.querySelectorAll('.ging-left').forEach(el => {
+      el.style.backgroundImage = `url('${ginghamImages[i]}')`;
+    });
   }
  
   applyTheme(0);

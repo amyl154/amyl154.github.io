@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 
-.lace-left, .lace-right {
+.lace-left{
   position: fixed;
   top: 0;
   width: 300px; /* adjust to your image width */
@@ -15,7 +15,7 @@ body {
   background-size: contain;
 }
 
-ging-left, .ging-right {
+.ging-left{
   position: fixed;
   top: 0;
   width: 300px; /* adjust to your image width */
@@ -25,15 +25,12 @@ ging-left, .ging-right {
   background-size: contain;
 }
 
-.lace-left { left: -60px; }
-.lace-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
-
-
-.ging-left { left: -60px; }
-.ging-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
+.ging-left { left: -150px; }
+.lace-left { left: 10px; }
 
 h1 {
   font-size: 100px;
+  margin-left:100px;
 }
 
 .momo-signature-regular {
@@ -51,6 +48,7 @@ h1 {
 .bio {
   font-size: 18px;
   line-height: 1.6;
+  margin-left:100px;
   margin-bottom: 20px;
 }
 
@@ -63,7 +61,6 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  margin: 8px 0;
 }
 
 .status-text {
