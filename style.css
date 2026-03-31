@@ -15,8 +15,22 @@ body {
   background-size: contain;
 }
 
+ging-left, .ging-right {
+  position: fixed;
+  top: 0;
+  width: 300px; /* adjust to your image width */
+  height: 100vh;
+  background-image: url('images/gingham2.png');
+  background-repeat: repeat-y; /* repeats downward */
+  background-size: contain;
+}
+
 .lace-left { left: -60px; }
 .lace-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
+
+
+.ging-left { left: -60px; }
+.ging-right { right: -60px; transform: scaleX(-1); } /* flips it to mirror */
 
 h1 {
   font-size: 100px;
