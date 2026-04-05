@@ -57,8 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.backgroundRepeat = 'repeat';
     document.body.style.backgroundSize = '60px 60px';
     document.body.style.color = textColors[i];
-    document.body.style.textShadow = textShadows[i];
-    document.querySelector('h1').style.color = textColors[i];
+    const h1 = document.querySelector('h1');
+    h1.style.color = textColors[i];
+    h1.style.textShadow = textShadows[i];
     bgButton.src = bgImages[i];
 
     // update modal colors
