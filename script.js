@@ -33,10 +33,12 @@ function makeSVG(bg, dot) {
 document.addEventListener('DOMContentLoaded', () => {
 
   const bgButton = document.getElementById("bgChangeBtn");
+  const timeButton = document.getElementById("timeBtn");
   const greenPink = makeSVG('#d9e3b7', '#ffdada');
   const blueBrown = makeSVG('#6d7d7d', '#5f5656 ');
   const backgrounds = [greenPink, blueBrown];
   const bgImages = ['images/button1.png', 'images/button2.png'];
+  const timeImages = ['images/clock1.png', 'images/clock2.png'];
   const textColors = ['#30270a', '#fdf6d4'];
   const textShadows=['2px 5px rgb(175, 180, 140)', '2px 5px #929c94']
   const sideImages = ['images/side1.png', 'images/side2.png'];
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     h1.style.color = textColors[i];
     h1.style.textShadow = textShadows[i];
     bgButton.src = bgImages[i];
+    timeButton.src = timeImages[i];
 
     // update modal colors
     const modal = document.getElementById('guestbookModal');
