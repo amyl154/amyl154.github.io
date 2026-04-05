@@ -1,5 +1,5 @@
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: "Fuzzy Bubbles", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   text-align: center;
@@ -39,10 +39,16 @@ h1 {
   font-style: normal;
 }
 
-.lexend {
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
+.fuzzy-bubbles-regular {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+  font-family: "Fuzzy Bubbles", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .bio {
