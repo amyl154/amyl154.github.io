@@ -10,7 +10,7 @@ body {
   top: 0;
   width: 300px; /* adjust to your image width */
   height: 100vh;
-  background-image: url('images/lace.png');
+  background-image: url('images/border.png');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }
@@ -25,12 +25,12 @@ body {
   background-size: contain;
 }
 
+.lace-left { left: 50px; }
 .side-left { left: -100px; }
-.lace-left { left: 60px; }
 
 h1 {
   font-size: 100px;
-  margin-left:100px;
+  margin-left:17%;
   margin-bottom:30px;
 }
 
@@ -55,7 +55,7 @@ h1 {
 .bio {
   font-size: 18px;
   line-height: 1.6;
-  margin-left:100px;
+  margin-left:17%;
   margin-bottom: 20px;
 }
 
@@ -68,6 +68,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
+  margin-left:17%;
 }
 
 .status-text {
