@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgImages = ['images/button1.png', 'images/button2.png'];
   const textColors = ['#30270a', '#fdf6d4'];
   const textShadows=['2px 5px rgb(175, 180, 140)', '2px 5px #929c94']
-  const ginghamImages = ['images/side1.jpg', 'images/side2.png'];
+  const sideImages = ['images/side1.png', 'images/side2.png'];
   let current = 0;
  
   const preload1 = new Image();
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.style.color = modalThemes[i].text;
     modal.style.border = `2px solid ${modalThemes[i].border}`;
 
-    // update gingham
-    document.querySelectorAll('.ging-left').forEach(el => {
-      el.style.backgroundImage = `url('${ginghamImages[i]}')`;
+    // update sidebar
+    document.querySelectorAll('.side-left').forEach(el => {
+      el.style.backgroundImage = `url('${sideImages[i]}')`;
     });
   }
  

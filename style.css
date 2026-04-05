@@ -15,17 +15,17 @@ body {
   background-size: contain;
 }
 
-.ging-left{
+.side-left{
   position: fixed;
   top: 0;
   width: 300px; /* adjust to your image width */
   height: 100vh;
-  background-image: url('images/side1.jpg');
+  background-image: url('images/side1.png');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }
 
-.ging-left { left: -150px; }
+.side-left { left: -150px; }
 .lace-left { left: 10px; }
 
 h1 {
