@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
  
+// firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDyEzt58vY5DsHQE831vxirC-t-qj6xEOw",
   authDomain: "website-24904.firebaseapp.com",
@@ -10,10 +11,11 @@ const firebaseConfig = {
   appId: "1:1029690411667:web:b8d3d4aba133ac078e9b66",
   measurementId: "G-RMSQ8NVWYV"
 };
- 
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
- 
+
+// background
 function makeSVG(bg, dot) {
   const encoded = encodeURIComponent(
     `<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
@@ -29,28 +31,15 @@ function makeSVG(bg, dot) {
 }
  
 document.addEventListener('DOMContentLoaded', () => {
- 
-  // bio toggle
-  const button = document.getElementById("showBioBtn");
-  const extraBio = document.getElementById("extraBio");
- 
-  button.addEventListener("click", function() {
-    if (extraBio.style.display === "none") {
-      extraBio.style.display = "block";
-      button.textContent = "Read Less";
-    } else {
-      extraBio.style.display = "none";
-      button.textContent = "Read More";
-    }
-  });
- 
-  // background
+
   const bgButton = document.getElementById("bgChangeBtn");
-  const greenPink = makeSVG('#b9d09d', '#e8caca');
-  const blueBrown = makeSVG('#6d7d7d', '#5f5656');
+  const greenPink = makeSVG('#d9e3b7', '#ffdada');
+  const blueBrown = makeSVG('#6d7d7d', '#5f5656 ');
   const backgrounds = [greenPink, blueBrown];
   const bgImages = ['images/starButton.png', 'images/heartButton.png'];
-  const textColors = ['#000000', '#ffffff'];
+  const textColors = ['#30270a', '#fdf6d4'];
+  const textShadows=['2px 5px rgb(175, 180, 140)', '2px 5px #929c94']
+  const ginghamImages = ['images/gingham2.png', 'images/gingham1.jpg'];
   let current = 0;
  
   const preload1 = new Image();
@@ -59,17 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
   preload2.src = bgImages[1];
 
   const modalThemes = [
-  { bg: '#f5e6ea', border: '#e8caca', text: '#000000' }, // green theme
-  { bg: '#4a4a4a', border: '#5f5656', text: '#ffffff' }, // dark theme
+  { bg: '#f5e6ea', border: '#e8caca', text: '#30270a' }, // green theme
+  { bg: '#4a4a4a', border: '#5f5656', text: '#fdf6d4' }, // blue theme
   ];
-
-  const ginghamImages = ['images/gingham2.png', 'images/gingham1.jpg'];
  
   function applyTheme(i) {
     document.body.style.backgroundImage = backgrounds[i];
     document.body.style.backgroundRepeat = 'repeat';
     document.body.style.backgroundSize = '60px 60px';
     document.body.style.color = textColors[i];
+    document.body.style.textShadow = textShadows[i];
     document.querySelector('h1').style.color = textColors[i];
     bgButton.src = bgImages[i];
 
@@ -151,5 +139,4 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     });
   }
- 
 });
