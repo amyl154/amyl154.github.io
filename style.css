@@ -10,7 +10,7 @@ body {
   top: 0;
   width: 300px; /* adjust to your image width */
   height: 100vh;
-  background-image: url('images/lace2.png');
+  background-image: url('images/lace.png');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }
@@ -20,7 +20,7 @@ body {
   top: 0;
   width: 300px; /* adjust to your image width */
   height: 100vh;
-  background-image: url('images/gingham2.png');
+  background-image: url('images/side1.jpg');
   background-repeat: repeat-y; /* repeats downward */
   background-size: contain;
 }

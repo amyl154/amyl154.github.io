@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const greenPink = makeSVG('#d9e3b7', '#ffdada');
   const blueBrown = makeSVG('#6d7d7d', '#5f5656 ');
   const backgrounds = [greenPink, blueBrown];
-  const bgImages = ['images/starButton.png', 'images/heartButton.png'];
+  const bgImages = ['images/button1.png', 'images/button2.png'];
   const textColors = ['#30270a', '#fdf6d4'];
   const textShadows=['2px 5px rgb(175, 180, 140)', '2px 5px #929c94']
-  const ginghamImages = ['images/gingham2.png', 'images/gingham1.jpg'];
+  const ginghamImages = ['images/side1.jpg', 'images/side2.png'];
   let current = 0;
  
   const preload1 = new Image();
