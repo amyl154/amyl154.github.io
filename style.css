@@ -89,6 +89,7 @@ h1 {
 }
 
 .sidebar-links {
+  text-align: left;
   position: fixed;
   left: 20px;
   top: 50%;

@@ -74,11 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.side-left').forEach(el => {
       el.style.backgroundImage = `url('${sideImages[i]}')`;
     });
-
-    document.querySelectorAll('.sidebar-links a').forEach(link => {
-    link.style.color = sidebarColors[i];
-    });
-
   }
  
   applyTheme(0);
