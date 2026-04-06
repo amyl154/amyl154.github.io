@@ -8,7 +8,7 @@ body {
 .lace-left{
   position: fixed;
   top: 0;
-  width: 300px; /* adjust to your image width */
+  width: 280px; /* adjust to your image width */
   height: 100vh;
   background-image: url('images/border.png');
   background-repeat: repeat-y; /* repeats downward */
@@ -25,7 +25,7 @@ body {
   background-size: contain;
 }
 
-.lace-left { left: 50px; }
+.lace-left { left: 200px; }
 .side-left { left: -100px; }
 
 h1 {
