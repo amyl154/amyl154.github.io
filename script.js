@@ -1,7 +1,8 @@
+// config/firebase.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
  
-// firebase configuration
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDyEzt58vY5DsHQE831vxirC-t-qj6xEOw",
   authDomain: "website-24904.firebaseapp.com",
@@ -85,28 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  
   // guestbook
-  const guestbookBtn = document.getElementById('guestbookBtn');
   const guestbookModal = document.getElementById('guestbookModal');
   const closeModal = document.getElementById('closeModal');
   const submitEntry = document.getElementById('submitEntry');
   const entries = document.getElementById('entries');
-  let selectedMood = '🌸';
- 
-  guestbookBtn.addEventListener('click', () => {
-    guestbookModal.style.display = 'block';
-    loadEntries();
-  });
  
   closeModal.addEventListener('click', () => {
     guestbookModal.style.display = 'none';
-  });
- 
-  document.querySelectorAll('.mood').forEach(mood => {
-    mood.addEventListener('click', () => {
-      document.querySelectorAll('.mood').forEach(m => m.style.opacity = '0.4');
-      mood.style.opacity = '1';
-      selectedMood = mood.textContent;
-    });
   });
  
   submitEntry.addEventListener('click', async () => {
@@ -121,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     await addDoc(collection(db, 'guestbook'), {
       name,
       message,
-      mood: selectedMood,
       date: new Date().toLocaleDateString()
     });
  
@@ -137,10 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const e = doc.data();
       entries.innerHTML += `
         <div style="border-top: 1px solid #eee; margin-top: 12px; padding-top: 12px;">
-          <strong>${e.name}</strong> ${e.mood} <span style="font-size:12px; color:#999;">${e.date}</span>
+          <strong>${e.name}</strong> <span style="font-size:12px; color:#999;">${e.date}</span>
           <p>${e.message}</p>
         </div>
       `;
     });
   }
+
+  document.getElementById('guestbookLink').addEventListener('click', (e) => {
+  e.preventDefault(); // stops the # from jumping the page
+  guestbookModal.style.display = 'block';
+  loadEntries();
+  });
+
 });

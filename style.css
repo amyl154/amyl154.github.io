@@ -87,3 +87,20 @@ h1 {
   top: 95%;
   left: 5%;
 }
+
+.sidebar-links {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 20;
+}
+
+.sidebar-links a {
+  color: #30270a;
+  text-decoration: none;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 14px;
+}

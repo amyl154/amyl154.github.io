@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Website</title>
+  <title>welcome friend :D</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Momo+Signature&display=swap" rel="stylesheet">
@@ -26,21 +26,12 @@
   <!-- time button -->
   <img id="timeBtn" src="images/clock2.png" style="position: absolute; top: 7%; left: 3%; width: 10%; cursor: pointer;">   
   <!-- guestbook popup -->
-  <img id="guestbookBtn" src="images/guestbook.png" style="width: 240px; height: 300px; cursor: pointer; position: absolute; top: 70%; left: 300px; transform: rotate(-10deg);">
   <div id="guestbookModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); padding:2rem; border-radius:16px; width:90%; max-width:400px; z-index:999;">
     <h2>Guestbook</h2>
 
     <input id="guestName" type="text" placeholder="your name" style="width:100%; margin:8px 0; padding:8px; border-radius:8px; border:1px solid #ccc;"><br>
     
     <textarea id="guestMessage" placeholder="leave a message..." style="width:100%; margin:8px 0; padding:8px; border-radius:8px; border:1px solid #ccc; height:100px;"></textarea><br>
-
-    <div id="moodPicker" style="font-size:1.5rem; margin:8px 0; cursor:pointer;">
-      <span class="mood">👍</span>
-      <span class="mood">🍚</span>
-      <span class="mood">🔒</span>
-      <span class="mood">🫩</span>
-      <span class="mood">😊</span>
-    </div>
 
     <button id="submitEntry">Sign Guestbook</button>
     <button id="closeModal">Close</button>
@@ -53,6 +44,16 @@
       <img src="https://tamanotchi.world/i/31588" alt="It's tamaNOTchi! Click to feed!" style="width: 30px;">
     </a>
   </div>
+
+  <div class="sidebar-links">
+    <a href="about.html">about me</a>
+    <a href="projects.html">projects</a>
+    <a href="learn.html">learn list</a>
+    <a href="places.html">places</a>
+    <a href="#" id="guestbookLink">Guestbook</a>
+    <a href="links.html">links</a>
+  </div>
+
 
   <!-- Link the JavaScript file -->
   <script type="module" src="script.js"></script>
