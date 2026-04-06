@@ -60,9 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.backgroundRepeat = 'repeat';
     document.body.style.backgroundSize = '60px 60px';
     document.body.style.color = textColors[i];
-    const h1 = document.querySelector('h1');
-    h1.style.color = textColors[i];
-    h1.style.textShadow = textShadows[i];
+    document.querySelector('h1').style.textShadow = textShadows[i];
     bgButton.src = bgImages[i];
     timeButton.src = timeImages[i];
 
@@ -76,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.side-left').forEach(el => {
       el.style.backgroundImage = `url('${sideImages[i]}')`;
     });
+
   }
  
   applyTheme(0);
