@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.side-left').forEach(el => {
       el.style.backgroundImage = `url('${sideImages[i]}')`;
     });
+
   }
  
   applyTheme(0);

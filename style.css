@@ -90,7 +90,7 @@ h1 {
 
 .sidebar-links {
   text-align: left;
-  position: fixed;
+  position: absolute;
   left: 20px;
   top: 50%;
   display: flex;
