@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.side-left').forEach(el => {
       el.style.backgroundImage = `url('${sideImages[i]}')`;
     });
-    
+
     // update sidebar links
     document.querySelectorAll('.sidebar-links a').forEach(link => {
       link.style.color = textColors[i];
@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name,
       message,
       date: new Date().toLocaleDateString()
+      //approved: false // hidden until you approve
     });
  
     document.getElementById('guestName').value = '';
@@ -123,12 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const snapshot = await getDocs(collection(db, 'guestbook'));
     snapshot.forEach(doc => {
       const e = doc.data();
+      //if (e.approved === true) { // only show approved
       entries.innerHTML += `
         <div style="border-top: 1px solid #eee; margin-top: 12px; padding-top: 12px;">
           <strong>${e.name}</strong> <span style="font-size:12px; color:#999;">${e.date}</span>
           <p>${e.message}</p>
         </div>
       `;
+      //}
     });
   }
 
@@ -137,5 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
   guestbookModal.style.display = 'block';
   loadEntries();
   });
+
+  // music
+  const aud= document.getElementById('music');
+  let isPlaying = false;
+
+  function playPause() {
+    if (isPlaying) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+    isPlaying = !isPlaying;
+  }
+
+  window.playPause = playPause; // bc im using type=module
 
 });

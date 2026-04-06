@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="lace-left">
+  <div class="lace-left" onclick="playPause()" style="cursor: pointer;"></div>
     <div class="side-left"></div>
   </div>
 
@@ -19,7 +19,13 @@
   </p>
 
   <div class="status-bar">
-  <span class="status-text">status: spring break and contemplation</span>
+  <span class="status-text">status: spring break and contemplation <!--
+    <iframe src="https://status.cafe/users/yourusername/embed" 
+      style="border: none; background: transparent; width: 300px; height: 30px;"
+      scrolling="no">
+    </iframe>
+    -->
+  </span>
   </div>
   <!-- theme button -->
   <img id="bgChangeBtn" src="images/button2.png" style="position: absolute; top: 70px; right: 350px; width: 60px; height: 60px; cursor: pointer;">
@@ -52,8 +58,11 @@
     <a href="places.html">places</a>
     <a href="#" id="guestbookLink">guestbook</a>
     <a href="links.html">links</a>
+    <a href="https://tamanotchi.world/31588c">tamanotchi</a>
   </div>
 
+  <!-- audio -->
+  <audio id="music" src="images/music2.mp3" preload="auto"></audio>
 
   <!-- Link the JavaScript file -->
   <script type="module" src="script.js"></script>
