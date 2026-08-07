@@ -1,106 +1,26 @@
+
 body {
-  font-family: "Fuzzy Bubbles", cursive;
-  font-optical-sizing: auto;
+  font-family: "Momo Trust Display", sans-serif;
   font-weight: 400;
   text-align: center;
+  margin: 0;
+  min-height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
 }
-
-.lace-left{
-  position: fixed;
-  top: 0;
-  width: 280px; /* adjust to your image width */
-  height: 100vh;
-  background-image: url('images/border.png');
-  background-repeat: repeat-y; /* repeats downward */
-  background-size: contain;
-}
-
-.side-left{
-  position: fixed;
-  top: 0;
-  width: 300px; /* adjust to your image width */
-  height: 100vh;
-  background-image: url('images/side1.png');
-  background-repeat: repeat-y; /* repeats downward */
-  background-size: contain;
-}
-
-.lace-left { left: 200px; }
-.side-left { left: -100px; }
 
 h1 {
   font-size: 100px;
-  margin-left:17%;
-  margin-bottom:30px;
+  margin: 0;
 }
 
-.momo-signature-regular {
-  font-family: "Momo Signature", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-bold {
-  font-family: "Fuzzy Bubbles", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.bio {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-left:17%;
-  margin-bottom: 20px;
-}
-
-::placeholder {
-  color: #aaa;
-  font-style: italic;
-}
-
-.status-bar {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  margin-left:17%;
-}
-
-.status-text {
-  display: inline-block;
-  font-style: italic;
-  animation: slide 10s linear infinite;
-}
-
-@keyframes slide {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-#tamagotchi {
-  position: absolute;
-  top: 95%;
-  left: 5%;
-}
-
-.sidebar-links {
-  text-align: left;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 20;
-}
-
-.sidebar-links a {
-  text-decoration: none;
-  font-family: "Fuzzy Bubbles", cursive;
-  font-size: 14px;
+#bgChangeBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
