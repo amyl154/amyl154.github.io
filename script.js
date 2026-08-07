@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgImages    = ['images/button1.png', 'images/button2.png']; 
   const textColors  = ['#544334', '#eee4b4'];    
   const textColors1  = ['#877b70', '#beb690'];                       
-  const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #4e291f'];
+  const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #beb290'];
  
   let current = 0; 
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(document.body.style, {
       backgroundImage: backgrounds[i],
       backgroundRepeat: 'repeat',
-      backgroundSize: '80px 80px',
+      backgroundSize: '120px 120px',
       color: textColors[i]
     });
  
