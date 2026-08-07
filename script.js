@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const backgrounds = [makeSVG('#d9e3b7', '#ffdada'), makeSVG('#361800', '#5E4633')];
   const bgImages    = ['images/button1.png', 'images/button2.png']; 
   const textColors  = ['#544334', '#eee4b4'];    
-  const textColors1  = ['#5E4633', '#ffdada'];                       
-  const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #929c94'];
+  const textColors1  = ['#877b70', '#beb690'];                       
+  const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #4e291f'];
  
   let current = 0; 
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(document.body.style, {
       backgroundImage: backgrounds[i],
       backgroundRepeat: 'repeat',
-      backgroundSize: '60px 60px',
+      backgroundSize: '80px 80px',
       color: textColors[i]
     });
  
