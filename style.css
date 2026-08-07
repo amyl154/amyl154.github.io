@@ -19,6 +19,21 @@ section {
   padding: 100px 0;
 }
 
+.sidebar-links {
+  gap: 12px;
+  justify-content: right;
+  margin: 20px 0;
+}
+
+.sidebar-links a {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.sidebar-links a:hover {
+  text-decoration: underline;
+}
+
 #bgChangeBtn {
   position: fixed;
   top: 20px;

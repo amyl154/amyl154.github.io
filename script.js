@@ -31,10 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
       color: textColors[i]
     });
  
-    //swap h1 theme
+    //swap text themes
     const h1 = document.querySelector('h1');
     h1.style.color = textColors[i];
     h1.style.textShadow = textShadows[i];
+
+    document.querySelectorAll('.sidebar-links a').forEach(link => {
+    link.style.color = textColors[i];
+    });
  
     // swap button theme
     bgButton.src = bgImages[i];
