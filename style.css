@@ -16,6 +16,18 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+section {
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+
 #bgChangeBtn {
   position: fixed;
   top: 20px;
