@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const bgButton = document.getElementById("bgChangeBtn");
   const backgrounds = [makeSVG('#d9e3b7', '#ffdada'), makeSVG('#361800', '#5E4633')];
   const bgImages    = ['images/button1.png', 'images/button2.png']; 
-  const textColors  = ['#30270a', '#fdf6d4'];    
-  const textColors1  = ['#544334', '#eee4b4'];                       
+  const textColors  = ['#544334', '#eee4b4'];    
+  const textColors1  = ['#5E4633', '#ffdada'];                       
   const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #929c94'];
  
   let current = 0; 
