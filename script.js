@@ -2,11 +2,11 @@ function makeSVG(bg, dot) {
   const encoded = encodeURIComponent(
     `<svg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'>
       <rect width='100%' height='100%' fill='${bg}'/>
-      <circle cx='20' cy='20' r='5' fill='${dot}'/>
-      <circle cx='0' cy='0' r='5' fill='${dot}'/>
-      <circle cx='40' cy='0' r='5' fill='${dot}'/>
-      <circle cx='0' cy='40' r='5' fill='${dot}'/>
-      <circle cx='40' cy='40' r='5' fill='${dot}'/>
+      <circle cx='20' cy='20' r='1' fill='${dot}'/>
+      <circle cx='0' cy='0' r='1' fill='${dot}'/>
+      <circle cx='40' cy='0' r='1' fill='${dot}'/>
+      <circle cx='0' cy='40' r='1' fill='${dot}'/>
+      <circle cx='40' cy='40' r='1' fill='${dot}'/>
     </svg>`
   );
   return `url("data:image/svg+xml;utf8,${encoded}")`;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(document.body.style, {
       backgroundImage: backgrounds[i],
       backgroundRepeat: 'repeat',
-      backgroundSize: '120px 120px',
+      backgroundSize: '170px 170px',
       color: textColors[i]
     });
  
