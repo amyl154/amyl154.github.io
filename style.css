@@ -38,9 +38,9 @@ section {
 
 #bgChangeBtn {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 20px;
-  width: 100px;
+  width: 120px;
   height: 80px;
   cursor: pointer;
 }
@@ -50,8 +50,9 @@ section {
   top: 20px;
   left: 120px;
   width: 100px;
-  height:100px;
+  height:80px;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
