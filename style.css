@@ -44,3 +44,11 @@ section {
   height: 60px;
   cursor: pointer;
 }
+
+.music {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

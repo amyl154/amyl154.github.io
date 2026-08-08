@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
  
   const bgButton = document.getElementById("bgChangeBtn");
   const backgrounds = [makeSVG('#d9e3b7', '#ffdada'), makeSVG('#232230','#2c3022')];
-  const bgImages    = ['images/button1.png', 'images/button2.png']; 
+  const bgImages    = ['images/lam1.png', 'images/lam2.png']; 
   const textColors  = ['#544334', '#a5b4be'];    
   const textColors1  = ['#877b70', '#6a7880'];                       
   const textShadows = ['2px 5px #afb48c', '2px 5px #494a54'];
+  const speakerImages = ['images/spe1.png', 'images/spe2.png'];
  
   let current = 0; 
 
@@ -39,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.sidebar-links a').forEach(link => {
     link.style.color = textColors1[i];
+
+    document.querySelector('.music').style.backgroundImage = `url('${speakerImages[i]}')`;
     });
  
     // swap button theme
@@ -51,5 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // when the button is clicked, switch
   bgButton.addEventListener("click", () => applyTheme(current = (current + 1) % backgrounds.length));
  
+  // music
+  const aud= document.getElementById('music');
+  let isPlaying = false;
+
+  function playPause() {
+    if (isPlaying) {
+      aud.pause();
+    } else {
+      aud.play();
+    }
+    isPlaying = !isPlaying;
+  }
+
+  window.playPause = playPause; // bc im using type=module
 });
  
