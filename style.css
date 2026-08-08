@@ -37,22 +37,28 @@ section {
 }
 
 #bgChangeBtn {
-  position: fixed;
-  top: 15px;
-  left: 20px;
   width: 120px;
   height: 80px;
   cursor: pointer;
 }
 
 .music {
-  position: fixed;
-  top: 20px;
-  left: 120px;
   width: 100px;
-  height:80px;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
