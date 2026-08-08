@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.sidebar-links a').forEach(link => {
     link.style.color = textColors1[i];
-
-    document.querySelector('.music').style.backgroundImage = `url('${speakerImages[i]}')`;
     });
- 
+    document.querySelector('.music').style.backgroundImage = `url('${speakerImages[i]}')`;
     // swap button theme
     bgButton.src = bgImages[i];
   }
