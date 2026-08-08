@@ -15,11 +15,11 @@ function makeSVG(bg, dot) {
 document.addEventListener('DOMContentLoaded', () => {
  
   const bgButton = document.getElementById("bgChangeBtn");
-  const backgrounds = [makeSVG('#d9e3b7', '#ffdada'), makeSVG('#232230','#362727')];
+  const backgrounds = [makeSVG('#d9e3b7', '#ffdada'), makeSVG('#232230','#2c3022')];
   const bgImages    = ['images/button1.png', 'images/button2.png']; 
-  const textColors  = ['#544334', '#eee4b4'];    
-  const textColors1  = ['#877b70', '#beb690'];                       
-  const textShadows = ['2px 5px rgb(175, 180, 140)', '2px 5px #beaf90'];
+  const textColors  = ['#544334', '#a5b4be'];    
+  const textColors1  = ['#877b70', '#495054'];                       
+  const textShadows = ['2px 5px #afb48c', '2px 5px #494a54'];
  
   let current = 0; 
 
