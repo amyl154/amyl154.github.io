@@ -40,14 +40,17 @@ section {
   position: fixed;
   top: 20px;
   left: 20px;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 80px;
   cursor: pointer;
 }
 
 .music {
-  width: 40px;
-  height: 40px;
+  position: fixed;
+  top: 20px;
+  left: 120px;
+  width: 100px;
+  height:100px;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
